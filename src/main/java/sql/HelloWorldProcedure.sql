@@ -1,0 +1,9 @@
+Create or replace procedure HELLO_WORLD()
+LANGUAGE PLPGSQL
+AS $$
+DECLARE
+BEGIN
+RAISE NOTICE 'WELCOME PEOPLE';
+END; $$
+
+call HELLO_WORLD();

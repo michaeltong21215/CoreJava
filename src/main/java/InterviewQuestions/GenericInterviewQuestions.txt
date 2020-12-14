@@ -1,0 +1,63 @@
+1. What is generics in java?
+- Generics allow classes, methods and/or interfaces to support a specific dynamic type
+2. What are all the advantages with generics?
+- It allows programmer to reuse methods/classes/interfaces to support different object types without knowing the data type and/or object type ahead of time.
+- It has type-safety, meaning that it can only support one single type of object without needing to specify what type it is.
+3. How generics works in java or what is type erasure?
+List<String> list = new ArrayList<String>();
+At compile time, it will check in this list do I have the string type.
+If it is yes,then it removes the type.
+List list = new ArrayList();
+Type erasure removes the data type from generic objects during compile time once it checks the type being compatible/valid.
+
+4. What is bounded & unbounded wildcards?
+bounded wildcards are used to define a specific list of sub classes that the generics can support.
+There are upper bounded wildcards and lower bounded wildcards.
+Upper bounded wildcards allow objects of any child classes of the generics to be supported.
+<? extends List>
+<? supers T>
+lower bounded wildcards allow objects of the parent class of the generics to be supported.
+unbounded wildcards allow any object classes to be supported by the generic.
+
+5. How do you write a generic method?
+- Needs to accept generic argument
+- Needs to return generic type
+a good example would be like this:
+    public <T> T funcOne(T val){
+        return val;
+    }
+6. How do you write a generic method which accepts generic arguments and return generic type?
+    public <T> T funcOne(T val){
+        return val;
+    }
+7. LRU means least recently used. Using generics, we can implement LRUCache.
+8. Can you use generics with arrays?
+No. Generics only work with (ex., collections)classes, interfaces, or methods)
+9. Can we use generics with primitive types?
+- If yes, why?
+- If no, why?
+No because generics only support object class types, not primitives.
+10. How can you suppressed unchecked warnings in java?
+This is a good example:
+@SuppressWarnings("unchecked")
+private List list1;
+11. Difference between List<? extends T> and List<? super T>?
+List<? extends T> represents the example of upper bounded wildcards.
+List<? super T> represents an example of lower bounded whilecards.
+12. Generics offers compile time type safety.
+13. If generic type is removed, when instantiating an object will the code still compile?
+Yes, it will.
+For example, List list = new ArrayList() is possible
+14. Difference between generic type and generic method?
+A generic type is a class or interface that is parameterized by type.
+
+15. What is type inference?
+Type inference is the concept that a generic class object can be constructed
+with empty set of type parameters as long as the compiler can infer type argument
+from the context.
+
+For example instead of doing this:
+Map<String, List<String>> myMap = new HashMap<String, List<String>>();
+
+Type inference allows this because it understands its context:
+Map<String, List<String>> myMap = new HashMap<>();
