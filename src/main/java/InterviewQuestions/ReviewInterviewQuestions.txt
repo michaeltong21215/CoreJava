@@ -1,0 +1,32 @@
+1. What is the difference between fail fast & fail safe iterator?
+2. What is the benefits of generics?
+
+public class MyList<T> implements List(
+   T[] arr;
+
+   //add
+   //delete
+   //edit
+}
+
+public static void main(String[] args) {
+   MyList<String> intList = new ArrayList();
+   MyList<Integer> sList = new ArrayList();
+}
+
+3. What are the basic interfaces in the Collection framework?
+- list
+  - ArrayList(array)
+    - access: can access any element randomly without going through the whole list(o(1))
+    - memory: takes less memory than linkedlist. As arraylist, you uses a variable to store values, which take less memory than storing a reference, which linkedlist uses.
+    - when to use:
+  - linkedlist(a bunch of nodes connected to each other via address)
+    - access: to access any random element, you need to go from the beginning of the list at all times, one node at a time, before reaching your destination node(o(n))
+    - memory: takes more memory than arraylist because need to allocate memory for each reference/node
+    -when to use:
+    - tree
+- set
+  -Hashset
+  -LinkedHashset
+- map
+- collection
