@@ -19,14 +19,41 @@ public static void main(String[] args) {
   - ArrayList(array)
     - access: can access any element randomly without going through the whole list(o(1))
     - memory: takes less memory than linkedlist. As arraylist, you uses a variable to store values, which take less memory than storing a reference, which linkedlist uses.
-    - when to use:
+    - when to use: do not need order collection and wants to optimize on memory
   - linkedlist(a bunch of nodes connected to each other via address)
     - access: to access any random element, you need to go from the beginning of the list at all times, one node at a time, before reaching your destination node(o(n))
     - memory: takes more memory than arraylist because need to allocate memory for each reference/node
-    -when to use:
+    -when to use: need ordered collection
     - tree
 - set
-  -Hashset
-  -LinkedHashset
+  -Hashset(unordered unique collection)
+  -LinkedHashset(ordered unique collection)
 - map
+  map.put(1, "hello");
+  map.put(1, "hi");
+  ["hello", 2]
+   -> "hi"
+
+  -Hashmap(unordered non-unique collection)
+  -LinkedHashmap(ordered non-unique collection)
+  -TreeMap
+  - Difference between
 - collection
+4. What is difference between comparable and comparator?
+Employee implement Comparable
+
+public int compareTo(Employee e2) return this.id < e2.getId();
+- id
+- name
+
+EmployeeIdComparator implements Comparator<T>
+public int compare(Employee e1, Employee e2){
+   return e1.getId() < e2.getId();
+}
+
+EmployeeNameComparator implements Comparator<T>
+public int compare(Employee e1, Employee e2){
+   return e1.getName() < e2.getName();
+}
+
+5. What is the difference between ClassNotFoundException and NoClassDefFoundError?
