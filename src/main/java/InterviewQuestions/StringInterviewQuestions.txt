@@ -1,1 +1,49 @@
 1. What is the difference between string builder and string buffer?
+
+String builder is not thread safe and string buffer is thread safe.
+Two processes can call methods of string builder simultaneously while it can't do the same with string buffer.
+
+String
+- immutable
+- to modify values, you can use string builder or string buffer depending on scenario.
+- for multithread environment use string buffer to modify strings for thread safe purposes.
+
+Difference between string, string builder, and string buffer?
+String builder is not thread safe and string buffer is thread safe.
+Two processes can call methods of string builder simultaneously while it can't do the same with string buffer.
+String is immutable while string builder and string buffer is mutable.
+When a string is concatenated with another string, it create a new string instance out of the two while string buffer only modifies the existing state.
+
+Changing strings is a lot more performance effective with string builder and string buffer.
+
+Why is string immutable?
+String is made immutable to keep it thread safe.
+
+Explain the string intern method.
+- It check if the string calling the method is available in the pool. If it is, return the pool version of the string.
+Otherwise, add string to the string pool and return that string.
+
+What is string constant pool?
+- The pool is a storage within the heap where all the strings defined are being stored at. If the string doesn't exist,
+a new string object is created and stored into the pool. otherwise, the pointer will point to existing string in the pool.
+
+How many ways you can create a string?
+You can use string literal or build a string via a constructor.
+
+
+Is string a primitive or derived type?
+
+What is string encoding?
+
+Go through the string api
+
+How can split a string
+- substr
+- substring
+- can split by delimiter(regex)
+
+What is String joiner?
+
+Conversion of string to other data types, other data types to strings
+
+

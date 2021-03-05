@@ -48,11 +48,13 @@ public class Department implements Externalizable {
     }
 
     public static void main(String[] args) {
-        Department d1 = new Department();
+        /* Department d1 = new Department();
         d1.setDepartmentId("500");
         d1.setDepartmentName("Department serialize");
         serialize(d1);
         Department d2 = deserialize();
         System.out.println(d2.toString());
+
+         */
     }
 }
