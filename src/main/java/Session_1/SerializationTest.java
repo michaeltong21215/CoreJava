@@ -28,7 +28,7 @@ public class SerializationTest {
     }
 
     public static void main(String[] args) {
-        Department d1 = new Department();
+        /*Department d1 = new Department();
         d1.setDepartmentName("d1 name");
         d1.setDepartmentId("1000");
         Employee employee = new Employee("1", "Michael", 27,"Tong","Chase", d1);
@@ -36,5 +36,7 @@ public class SerializationTest {
         serialize(employee);
         Employee employee1 = deserialize();
         System.out.println(employee1.toString());
+
+         */
     }
 }

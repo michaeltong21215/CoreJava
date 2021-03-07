@@ -12,12 +12,13 @@ public class GenericMain {
     public void someMethod(){
         List<? extends Number> arr = new ArrayList<Number>();
         List<? extends Number> arrTwo = new ArrayList<Long>();
-        List<? extends Number> arrThree = new ArrayList<Department>();
+        // List<? extends Number> arrThree = new ArrayList<Department>();
         List<? super Number> arrFour = new ArrayList<Number>();
 
     }
 
     public static void main(String[] args) {
+        /*
         String str = "Hello World";
 
         List l1 = new ArrayList();
@@ -75,7 +76,7 @@ public class GenericMain {
         boundArr.add("bound1");
         boundArr.add("bound2");
         b1.printData(boundArr);
-
+        */
     }
 }
 
